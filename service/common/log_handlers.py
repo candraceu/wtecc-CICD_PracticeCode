@@ -34,5 +34,6 @@ def init_logging(app, logger_name: str):
         "[%(asctime)s] [%(levelname)s] [%(module)s] %(message)s", "%Y-%m-%d %H:%M:%S %z"
     )
     for handler in app.logger.handlers:
+        
         handler.setFormatter(formatter)
     app.logger.info("Logging handler established")
